@@ -14,7 +14,7 @@
         "NXF_EDGE": "0",
         "NXF_VER": "25.04.3",
         // Other env vars
-        "HOST_PROJECT_PATH": "/workspaces/training",
+        "HOST_PROJECT_PATH": "/workspaces/nextflow_training",
         "SHELL": "/bin/bash" // Ush bash
     },
     "onCreateCommand": "bash .devcontainer/setup.sh",
