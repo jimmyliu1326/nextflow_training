@@ -8,7 +8,7 @@ This repository serves as an archive for the training materials that were develo
 - Operators
 - Running Nextflow pipelines via CLI
 - Hierarchical structure of a typical Nextflow pipeline repo
-- NF-CORE template
+- NF-CORE template, community and guidelines
 
 ## Running the tutorial
 This tutorial is powered by **GitHub Codespace** to provision a common environment for all trainees (or anyone) to follow along and collaborate. The environment is pre-installed with Nextflow, Conda and VSCode, providing the necessary means to test out example workflows, as well as the workflows developed by the trainees themselves.
@@ -20,7 +20,7 @@ For this section, trainees are tasked with building a simple microbial genomics 
 
 ![diagram](https://github.com/jimmyliu1326/nextflow_training/blob/main/img/activity_flowchart.png?raw=true)
 
-An initial workflow template has been set up for you at [main.nf](), populate the 
+To get started, an initial workflow template has been set up for you at [main.nf]().
 
 ## Acknowledgement
 This tutorial was co-developed by Jimmy Liu, Marcus Yee and Miguel Prieto
