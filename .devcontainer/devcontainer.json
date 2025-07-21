@@ -18,6 +18,7 @@
         "SHELL": "/bin/bash" // Ush bash
     },
     "onCreateCommand": "bash .devcontainer/setup.sh",
+    "postCreateCommand": "git pull origin main",
     "customizations": {
         "vscode": {
             "extensions": ["nf-core.nf-core-extensionpack"],
