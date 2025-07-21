@@ -9,3 +9,6 @@ nextflow self-update
 nextflow -version
 
 cat /usr/local/etc/vscode-dev-containers/first-run-notice.txt
+
+# install nf-core tools
+conda create -n nf-core -y bioconda::nf-core
