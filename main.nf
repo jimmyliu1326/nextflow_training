@@ -13,6 +13,12 @@ workflow {
         .fromPath( "https://object-arbutus.cloud.computecanada.ca/cidgohshare/hackathon/seqqc/isolate_wgs/nanopore/sra_split/ERR7565110/ERR7565110.1.fastq.gz")
         .map { [ [ id: 'ERR7565110' ], it ] }
 
-    // workflow start
+    // TO DO: Walk through the first step of the workflow together
+    NANOQ()    
+
+	  // TO DO: Complete the workflow with the last two processes (medaka and sistr)
+	  MEDAKA()
+    
+	  SISTR()
 
 }
