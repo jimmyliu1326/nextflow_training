@@ -16,7 +16,7 @@ This tutorial is powered by **GitHub Codespace** to provision a common environme
 Navigate to this link to launch the environment: https://github.com/codespaces/new/jimmyliu1326/nextflow_training?quickstart=1
 
 ## Integrated activity
-For this section, trainees are tasked with building a simple microbial genomics pipeline to predict *Salmonella* serovars from nanopore long-read sequencing data. Using the provided nf-core modules, you are expected to construct a workflow according to the following diagram: 
+For this section, trainees are tasked with building a simple microbial genomics pipeline to predict *Salmonella* serovars from nanopore long-read sequencing data. Using the provided nf-core modules, you are expected to construct a workflow according to the following diagram:
 
 ![diagram](https://github.com/jimmyliu1326/nextflow_training/blob/main/img/activity_flowchart.png?raw=true)
 
