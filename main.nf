@@ -17,9 +17,9 @@ workflow {
 
 
     // TO DO: Walk through the first step of the workflow together
-    //NANOQ()    
+    //NANOQ()
 
-	// TO DO: Complete the workflow with the last two processes (medaka and sistr)
+	// TO DO: Complete the workflow with the remaining processes in the workflow diagram
     //MINIASM()
 	//MEDAKA()
 	//SISTR()
