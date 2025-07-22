@@ -20,7 +20,7 @@ For this section, trainees are tasked with building a simple microbial genomics 
 
 ![diagram](https://github.com/jimmyliu1326/nextflow_training/blob/main/img/activity_flowchart.png?raw=true)
 
-To get started, an initial workflow template has been set up for you at [main.nf]().
+To get started, an initial workflow template has been set up for you at [main.nf](https://github.com/jimmyliu1326/nextflow_training/blob/main/main.nf).
 
 ## Acknowledgement
 This tutorial was co-developed by Jimmy Liu, Marcus Yee and Miguel Prieto
