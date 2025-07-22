@@ -1,38 +1,24 @@
-// TO DO: make sure to import the remaining modules
+#!/usr/bin/env nextflow
 
-include { NANOQ				} from './modules/nf-core/nanoq/main.nf'
-include { FLYE				} from './modules/nf-core/flye/main'
-include { MEDAKA			} from './modules/nf-core/medaka/main'
+// import nf-core modules
+include { MEDAKA } from './modules/nf-core/medaka'
+include { NANOQ } from './modules/nf-core/nanoq'
+include { SISTR } from './modules/nf-core/sistr'
+include { MINIASM } from './modules/nf-core/miniasm'
 
-// TO DO: define path to fastq files
-channel.fromPath("path/to/*fastq.gz")
-	.map { 
-		file ->
-		def basename = file.getBasename()
-		[id: basename], file
-	}
-	.set{ch_reads}
-
-// TO DO: what values are accepted by the NANOQ process?
-ch_nanoq_outfmt = Channel.value("complete_here")
-
+// define workflow
 workflow {
+    // define input channel
+    ch_reads = Channel
+        .fromPath( "https://object-arbutus.cloud.computecanada.ca/cidgohshare/hackathon/seqqc/isolate_wgs/nanopore/sra_split/ERR7565110/ERR7565110.1.fastq.gz")
+        .map { [ [ id: 'ERR7565110' ], it ] }
 
-	NANOQ(ch_reads, ch_nanoq_outfmt)
-	ch_nanoq_reads = NANOQ.out.reads
+    // TO DO: Walk through the first step of the workflow together
+    NANOQ()    
 
-
-	FLYE(ch_nanoq_reads, val("--nano-hq"))
-
-
-	// TO DO: complete the inputs to produce a channel in the form of 
-	//		  tuple val(meta_map), path(reads), path(assembly)
-	ch_reads.join()
-		.set{ch_input_medaka}
-
-	// TO DO: complete the workflow with the last two processes (medaka and sistr)
-	MEDAKA()
-
-	SISTR()
+	  // TO DO: Complete the workflow with the last two processes (medaka and sistr)
+	  MEDAKA()
+    
+	  SISTR()
 
 }
