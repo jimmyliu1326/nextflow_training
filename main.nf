@@ -9,16 +9,19 @@ include { MINIASM } from './modules/nf-core/miniasm'
 // define workflow
 workflow {
     // define input channel
-    ch_reads = Channel
-        .fromPath( "https://object-arbutus.cloud.computecanada.ca/cidgohshare/hackathon/seqqc/isolate_wgs/nanopore/sra_split/ERR7565110/ERR7565110.1.fastq.gz")
-        .map { [ [ id: 'ERR7565110' ], it ] }
+    ch_reads_path = Channel.fromPath( "https://object-arbutus.cloud.computecanada.ca/cidgohshare/hackathon/seqqc/isolate_wgs/nanopore/sra_split/ERR7565110/ERR7565110.1.fastq.gz")
+    ch_meta       = Channel.from( [ id: 'ERR7565110' ] )
+    ch_reads      = ch_meta.combine( ch_reads_path )
+
+    // TO DO: Inspect what the ch_reads channel looks like
+
 
     // TO DO: Walk through the first step of the workflow together
-    NANOQ()    
+    //NANOQ()    
 
-	  // TO DO: Complete the workflow with the last two processes (medaka and sistr)
-	  MEDAKA()
-    
-	  SISTR()
+	// TO DO: Complete the workflow with the last two processes (medaka and sistr)
+    //MINIASM()
+	//MEDAKA()
+	//SISTR()
 
 }
